@@ -4,6 +4,42 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>Studio albums</title>
 	</head>
+	<style>
+		 
+		p:first-of-type,
+		p:last-of-type{
+			color: red;
+		}
+
+		p:nth-of-type(2){
+			font-family: Tahoma;
+		}
+
+		p:nth-of-type(3){
+			color: #CC0000;
+		}
+
+		p:nth-of-type(4){
+			background-color: #00FF00;
+		}
+		p:nth-of-type(5){
+			font-size: 22px;
+		}
+
+		/* EJERCICIO PARTE F */
+		p:nth-of-type(2n) {
+			background-color: #f0f0f0;
+		}
+		p:nth-of-type(-n+3) {
+			font-weight: bold;
+		}
+		p:nth-of-type(n+4):nth-of-type(-n+6) {
+			color: #ff4500;
+		}
+
+
+		
+	</style>
 	<body>
 		<div>
     			<p>In the Court of the Crimson King (1969)</p>
