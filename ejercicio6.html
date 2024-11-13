@@ -4,6 +4,29 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>Progressive rock</title>
 	</head>
+	<style>
+		/* a) Cambia la tipografía de todas las etiquetas <p> a Garamond */
+		p {
+			font-family: Garamond, serif;
+		}
+
+		/* b) Aplica negrita a los párrafos de introducción y conclusión */
+		p:first-of-type, 
+		p:last-of-type {
+			font-weight: bold;
+		}
+
+		/* c) Cambia el color del párrafo correspondiente al sumario a #7AC5CD */
+		div > p {
+			color: #7AC5CD;
+		}
+
+		/* d) Cambia el color y subraya los párrafos dentro de la lista no ordenada */
+		ul li p {
+			color: #000000;
+			text-decoration: underline;
+		}
+	</style>
 	<body>
 		<p>(Introduction) Musical aspects</p>
 		<div>
