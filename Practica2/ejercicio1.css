@@ -1,0 +1,71 @@
+body {
+    margin: 2px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+h1 {
+    color: palevioletred;
+    font-weight: bold;
+    font-family: sans-serif; 
+}
+
+h2 {
+    color: rgb(154, 216, 235);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#tagline {
+    color: burlywood;
+    font-style: italic;
+}
+
+.date {
+    color: coral;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+#nav li {
+    font-size: 25px;
+    background-color: cadetblue;
+    padding: 5px; /* Padding de 5px */
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#nav li:hover {
+    background-color: darkcyan;
+    transform: scale(1.1);
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: lightgray;
+}
+
+/* Estilos para el borde del post */
+.post {
+    border: 1px dashed #CCCCCC; /* Borde de 1px de rayas */
+    padding: 15px; /* Añadido un padding interno para el contenido del post */
+    margin: 10px 0;
+}
