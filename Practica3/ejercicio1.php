@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Aplicación de estilos CSS</title>
+  <title>Aplicaciï¿½n de estilos CSS</title>
   <style>
-	* { font-family: Verdana, Arial, sans-serif; }
-    table, td, th { border: solid 1px black; }
- 
-  </style>
+        * {
+            font-family: Verdana, Arial, sans-serif;
+        }
+        table, td, th {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #663333;
+            color: white;
+        }
+        th:nth-child(2), td:nth-child(2) {
+            color: #FF0000;
+        }
+        /* Estilos para las filas con periodicidad */
+        tr:nth-child(6n+1) td {
+            background-color: #FFCCCC;
+        }
+        tr:nth-child(6n+2) td {
+            background-color: #FFCCCC;
+        }
+        tr:nth-child(6n+3) td {
+            background-color: #FFCCCC;
+        }
+        tr:nth-child(6n+4) td {
+            background-color: #FFFFCC;
+        }
+        tr:nth-child(6n+5) td {
+            background-color: #CCFFCC;
+        }
+        tr:nth-child(6n) td {
+            background-color: #CCFFFF;
+        }
+    </style>
 </head>
 <body>
    <table>
