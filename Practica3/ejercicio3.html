@@ -3,14 +3,45 @@
   <head>
   <title>Ejemplo de estilos en citas</title>
 </head>
+<style>
+     #wind{
+          background-color: #FFCCCC;
+     }
+     #build{
+          background-color: #FFCCCC;
+     }
+     /* Estilo para los elementos vacíos */
+    td:empty {
+      border: 1px solid red;
+      content: "a";
+    }
+
+    /* Estilo general para la tabla */
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    /* Estilo para la cabecera */
+    th {
+      background-color: #CCCCFF;
+    }
+</style>
+<!-- Tenemos una tabla con verbos irregulares en inglés. Cada fila de la tabla contiene el verbo en
+infinitivo, el verbo en el pasado simple, el verbo en el participio pasado y su traducción. Además,
+dos filas de la tabla contienen un identificador. Cuatro enlaces apuntan a estos identificadores (dos y
+dos) con el código href = #identificador.
+a) Las áreas a las que accede un enlace tendrán un fondo rojo claro (#FFCCCC).
+b) Los elementos vacíos tendrán un borde rojo de 1 píxel y un relleno de un carácter en minúscula. -->
 <body>
-<h1>Verbos irregulares en ingl�s : lista completa</h1>	
+<h1>Verbos irregulares en ingl�s : lista completa</h1>	
 
   <p></p>
   <p>Ir al <a href="#wind">verbo <q>wind</q></a></p>
   <p>Ir al <a href="#build">verbo <q>build</q></a></p>
   
-<table summary="Verbos irregulares en ingl�s - lista completa">
+<table summary="Verbos irregulares en ingl�s - lista completa">
   <thead>
     <tr>
      <th>Infinitivo</th>
