@@ -3,6 +3,7 @@ div {
     height: 100px;
     border: 3px solid #444;
     padding: 4px;
+    float: left; /* Hace que las cajas floten una junto a la otra */
 }
 
 #box1 {
@@ -11,4 +12,19 @@ div {
 
 #box2 {
     background: #0F0;
+    margin-left: 20px; /* Cambia a -20px en el segundo paso */
 }
+
+
+/*
+Con margin-left: 20px en #box2:
+Al aplicar un margen izquierdo de 20px a la segunda caja (#box2), 
+se crea un espacio adicional entre #box1 y #box2. Esto desplaza la segunda 
+caja un poco más a la derecha, manteniendo ambas cajas en la misma línea pero 
+con una separación extra.
+Con margin-left: -20px en #box2:
+Al cambiar el margen izquierdo a -20px, la segunda caja se superpone a la primera. 
+Este margen negativo hace que #box2 se mueva 20px hacia la izquierda, encimándose
+ parcialmente sobre la primera caja (#box1). Esto puede dar la impresión de un efecto
+  de superposición, donde las cajas se entremezclan visualmente.
+*/

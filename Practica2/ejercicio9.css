@@ -11,3 +11,28 @@ div.grid {
 #moveMe {
     background:blue;
 }
+
+
+/* Posicionar #moveMe 5px hacia abajo y a la izquierda desde su posición inicial: */
+#moveMe {
+    background: blue;
+    position: relative;
+    top: 5px; /* Desplaza hacia abajo */
+    left: -5px; /* Desplaza hacia la izquierda */
+}
+
+/* Mover #moveMe 10px hacia abajo y 10px hacia la derecha: */
+/* #moveMe {
+    position: relative;
+    top: 10px;
+    left: 10px;
+} */
+
+/* Evitar el hueco moviendo #moveMe hacia arriba en lugar de hacia abajo: */
+/*
+#moveMe {
+    position: relative;
+    top: -10px;  Se mueve hacia arriba 
+    left: 10px;  Se mueve hacia la derecha 
+}
+*/

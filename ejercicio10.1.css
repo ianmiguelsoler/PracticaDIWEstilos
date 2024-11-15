@@ -1,0 +1,74 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* header */
+#header {
+    width: 880px;
+    height: 150px;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 0 auto 10px; /* Centra el encabezado */
+}
+
+/* Contenedor principal */
+#main-content {
+    display: flex;
+    width: 880px;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Contenedor izquierdo */
+#contenedor {
+    height: 500px;
+    border: 5px solid black;
+    margin-right: 10px;
+    padding: 5px;
+    width: 620px; /* Ancho fijo para el contenido principal */
+}
+
+/* Contenedor derecho (aside) */
+#right-content {
+    border: 5px solid black;
+    padding: 5px;
+    flex-grow: 1; /* Hace que el aside ocupe todo el espacio restante */
+    height: 500px; 
+}
+
+
+/* Estilo para la lista en #right-content */
+#right-content ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 10px 0;
+}
+
+#right-content ul li {
+    padding: 10px 0; /* Espacio entre los elementos de la lista */
+    border-bottom: 1px solid #ccc; /* Línea divisoria debajo de cada elemento */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color de texto */
+}
+
+#right-content ul li:last-child {
+    border-bottom: none; /* Elimina la línea debajo del último elemento */
+}
+
+/* Pie de página */
+#pie {
+    width: 880px;
+    height: 100px;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 10px auto 0; /* Centra el pie de página */
+}
+
+/* Título y alineación */
+.titulo, h2, p, ul {
+    margin: 10px;
+}

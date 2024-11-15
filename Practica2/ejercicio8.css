@@ -1,3 +1,17 @@
 div {
+    display: inline;
     border: 1px solid black;
 }
+/* Colocación en línea: Cada <div> se alinea horizontalmente
+ uno al lado del otro en la misma línea,
+  ocupando solo el espacio necesario para su contenido, en lugar de ocupar toda la línea horizontal. */
+
+/* div {
+    display: inline;
+    position: relative;
+    top: 10px;  Ejemplo de desplazamiento relativo 
+    left: 5px;  Ejemplo de desplazamiento relativo 
+    border: 1px solid black;
+} */
+/* Desplazamiento desde la posición original: position: relative permite mover el
+ elemento desde su posición inicial (en línea en este caso) usando top, right, bottom y left. */

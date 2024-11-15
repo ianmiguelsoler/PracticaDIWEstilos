@@ -1,0 +1,23 @@
+/* Estilos para los bordes de cada div */
+#one {
+    border: 1px solid black;
+}
+
+#two {
+    border: 1px dotted #555555;
+}
+
+#three {
+    border: 1px dashed #CCCCCC;
+}
+
+/* Estilo para todas las etiquetas <span> */
+span {
+    border: 1px solid #FF0000;
+}
+
+/* Margen y padding para todos los div */
+div {
+    margin: 15px;
+    padding: 20px;
+}
