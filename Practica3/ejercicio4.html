@@ -4,6 +4,35 @@
   <title>Prueba de pseudoclases de estado</title>
 
 </head>
+<style>
+	/* a) Elementos en estado indeterminado */
+	input:indeterminate {
+	background-color: lime;
+	}
+
+	/* b) Elementos seleccionados o marcados */
+	input:checked {
+	background-color: rgb(255, 102, 0);
+	color: aquamarine;
+	}
+
+	/* c) Elementos activos */
+	input:active {
+	background-color: yellow;
+	}
+
+	/* d) Elementos inactivos */
+	input:disabled {
+	background-color: gray;
+	color: white;
+	}
+</style>
+<!-- 4. Crea un estilo diferente utilizando las pseudoclases correspondientes para:
+a) Aquellos elementos que se encuentren en un estado indeterminado.
+b) Aquellos elementos que se encuentren seleccionados o marcados.
+c) Aquellos elementos que se encuentren activos.
+d) Aquellos elementos que se encuentren inactivos.
+Este tipo de pseudoclases es posible que no se visualice correctamente en todos los navegadores. -->
 <body>
     <h1>Prueba de pseudoclases de estado</h1>
     <form action="">
