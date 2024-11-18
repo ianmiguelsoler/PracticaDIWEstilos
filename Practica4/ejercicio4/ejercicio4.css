@@ -1,9 +1,9 @@
 /* === IMPORTANTE ===================================================
    No modificar estos estilos, ya que son imprescindibles para
-   que la página se vea correctamente.
+   que la pï¿½gina se vea correctamente.
    ================================================================== */
 
-/*-- Básico ----------------------------------------------------------*/
+/*-- Bï¿½sico ----------------------------------------------------------*/
 ul, ul li { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, p, form { margin: 0; padding: 0; }
 .clear { clear: both; }
@@ -36,19 +36,71 @@ img { border: none; }
 /*-- Menu ------------------------------------------------------------*/
 #menu ul#menu_principal li { display: inline; float: left; }
 
-/*-- Sección Principal -----------------------------------------------*/
+/*-- Secciï¿½n Principal -----------------------------------------------*/
 #contenido #principal .articulo img { width: 100px; float: left; }
 
-/*-- Pie de página ---------------------------------------------------*/
+/*-- Pie de pï¿½gina ---------------------------------------------------*/
 #pie .enlaces   { float: left; }
 #pie .copyright { float: right; }
 
 /* === IMPORTANTE ===================================================
-   A partir de aquí, se pueden añadir todos los estilos propios que 
+   A partir de aquï¿½, se pueden aï¿½adir todos los estilos propios que 
    sean necesarios.
    ================================================================== */
 
+  body {
+    color: black; /* Color de la fuente */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    font-size: 0.9em; /* TamaÃ±o de fuente */
+    line-height: 1.4; /* Interlineado */
+  }
+  a {
+    color: #0000EE; /* Azul vibrante (por defecto en los enlaces) */
+    text-decoration: underline; /* Para asegurarte de que se subraye */
+}
 
+  .articulo h2 {
+    color: #CC6600;
+    font-size: 1.6em; /* TamaÃ±o de fuente */
+    line-height: 1.2; /* Interlineado */
+    margin-bottom: 0.3em;
+  }
+  #menu{
+    /* margin-right: 1em; */
+    margin-bottom: .5em;
+    border-bottom: 1px solid #004C99;
+    background: url(./fondo_menu.gif);
+  }
+  #menu_principal li a{
+    color: white;
+    font-size: 1.3em;
+    margin-right: 20px;
+  }
+  #lateral{
+    font-size: 0.9em;
+  }
+  .fecha {
+    display: block; /* Asegura que ocupe toda la lÃ­nea */
+    color: #999999; /* Color gris claro */
+  }
+  #noticias h3{
+    color: #555555;
+  }
+  #noticias h3 a{
+    color: #CC6600;
+  }
+  .articulo a, #publicidad a {
+    color: #CC6600; /* Color de los enlaces dentro de los artÃ­culos */
+    text-decoration: none; /* Opcional, elimina el subrayado */
+  }
+  .articulo p {
+    margin-top: 0.3em; /* Margen superior */
+    margin-bottom: 0.3em; /* Margen inferior */
+  }
+  #buscador {
+    text-align: center; /* Centra el contenido dentro del div */
+    margin-top: 1em;
+  }
 #cabecera,
 #menu,
 #lateral,
@@ -74,14 +126,9 @@ img { border: none; }
   background: url(../comun/imagenes/logo.gif) no-repeat -5px -10px;
 }
 
-#cabecera h1 span {
-  visibility: hidden;
-}
-
-#menu {
-  margin-bottom: .5em;
-  border-bottom: 1px solid #004C99;
-  background: url(../comun/imagenes/fondo_menu.gif) repeat-x;
+#cabecera h1 span, #publicidad h3 a {
+  font-size: 1em;
+  color: #CC6600;
 }
 
 #contenido {
