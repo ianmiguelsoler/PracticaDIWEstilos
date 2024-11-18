@@ -4,26 +4,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Selectores</title>
 <style type="text/css">
-/* Todos los elementos de la pagina */
-{ font: 1em/1.3 Arial, Helvetica, sans-serif; }
- 
-/* Todos los parrafos de la pagina */
-{ color: #555; }
- 
-/* Todos los p�rrafos contenidos en #primero */
-{ color: #336699; }
- 
-/* Todos los enlaces de la pagina */
-{ color: #CC3300; }
- 
-/* Los elementos "em" contenidos en #primero */
-{ background: #FFFFCC; padding: .1em; }
- 
-/* Todos los elementos "em" de clase "especial" en toda la pagina */
-{ background: #FFCC99; border: 1px solid #FF9900; padding: .1em; }
- 
-/* Elementos "span" contenidos en .normal */
-{ font-weight: bold; }
+/* Estilo para todos los elementos de la página */
+* {
+    font: 1em/1.3 Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para todos los párrafos de la página */
+p {
+    color: #555;
+}
+
+/* Estilo para todos los párrafos dentro de #primero */
+#primero p {
+    color: #336699;
+}
+
+/* Estilo para todos los enlaces de la página */
+a {
+    color: #CC3300;
+}
+
+/* Estilo para los elementos "em" dentro de #primero */
+#primero em {
+    background: #FFFFCC;
+    padding: .1em;
+}
+
+/* Estilo para los elementos "em" con clase "especial" en toda la página */
+em.especial {
+    background: #FFCC99;
+    border: 1px solid #FF9900;
+    padding: .1em;
+}
+
+/* Estilo para los elementos "span" contenidos en elementos con clase "normal" */
+.normal span {
+    font-weight: bold;
+}
+
  
 </style>
 </head>
