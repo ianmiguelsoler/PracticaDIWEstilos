@@ -101,6 +101,17 @@ img { border: none; }
     text-align: center; /* Centra el contenido dentro del div */
     margin-top: 1em;
   }
+  .articulo img {
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 1em; /* Espacio a la derecha */
+    margin-bottom: 1em; /* Espacio debajo */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    background-color: #d3d3d3; /* Fondo gris claro */
+    border: 1px solid #ccc; /* Borde fino */
+    display: block; /* Asegura que se comporta como un bloque */
+}
+
 #cabecera,
 #menu,
 #lateral,
