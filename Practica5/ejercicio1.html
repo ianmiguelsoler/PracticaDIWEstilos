@@ -12,6 +12,10 @@
 <style>
 
 /*list item image wrapper*/
+body{
+	font-family: sans-serif;
+	font-size: 1.2em;
+}
 .list .list-item__image {
   flex-shrink: 0;
 }
@@ -19,8 +23,37 @@
 /*list item content*/
 .list .list-item__content {
   flex-grow: 1;
+  margin-left: 2%;
+  line-height: 1px;
+}
+img{
+	border-radius: 50%;
+	width: 80%;
+}
+.list{
+	list-style: none;
+}
+.list-item {
+    display: flex;
+    border-bottom: 1px solid rgb(241, 241, 241); /* Añade la línea divisoria */
+    padding: 10px 0; /* Espaciado para que la línea no quede pegada al contenido */
 }
 
+.list-item:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+}
+
+.list-wrapper{
+	border: 10px solid rgb(148, 198, 255);
+	width: 25%;
+	margin: 20px auto;
+}
+.list-item__content p{
+	color: rgb(197, 196, 196);
+}
+ul{
+	padding: 5%;
+}
 </style>
 
 </head>
@@ -34,7 +67,7 @@
 		<div class="list-item__image">
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="Thumbnail">
 		</div>
-		<div class="list-item__content">
+		<div class="list-item__content"> 
 			<h4> Linda Hart </h4>
 			<p> 6765 Shady Ln Dr </p>
 		</div>
