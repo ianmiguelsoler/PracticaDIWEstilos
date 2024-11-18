@@ -2,19 +2,62 @@
 /* Style Sheet for Jaberwocky Tutorial */
 
 /* Body */
-body {background-color: tan}
+body {
+    background-color: tan;
+    background-image: url(’jabber2.gif’);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 /* Headers */
-h1 {color:maroon; font-size:20pt}
+h1 {
+    color: maroon;
+    font-size: 20pt;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border-style: groove double;
+    border-color: blue;
+    border-width: 10px;
+    text-align: center; /* Alinea el texto al centro */
+    margin-right: 500px; /* Añade un margen de 500px a la derecha */
+    background-image: url('backtitle.gif'); /* Añade la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para que cubra el área */
+    background-position: center; /* Centra la imagen en el fondo */
+}
+
+
+h2 {
+    color: darkblue;
+}
 
 /* HR (Hard Rule = line) */
-hr {color:navy}
-
+hr {
+    color: navy;
+    height: 10px;
+    margin: 20px 0; /* Añade espacio vertical antes y después */
+}
 /* Paragraphs */
 p {font-size:12pt; margin-left: 15px}
 p.verse {color:maroon; margin-left: 60px}
 
+p.comment {
+    color: darkgreen;
+}
+
 /* Divs */
+div.reference {
+    color: slategray;
+    margin-left: 40px;
+}
+
+/* Image */
+img {
+    width: 304px; /* Asegura que la imagen tenga este ancho */
+    display: block; /* Asegura que la imagen sea tratada como un bloque */
+    margin: 20px auto; /* Centra la imagen horizontalmente y añade márgenes */
+}
 
 /* Links */
 a:link     {color:green}
@@ -27,5 +70,3 @@ a:active   {color:blue}
 /* Classes used by all html elements */
 
 /* Ids */
-
-
