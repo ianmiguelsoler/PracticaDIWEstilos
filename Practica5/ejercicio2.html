@@ -2,31 +2,87 @@
 <html>
 
 <head>
-
   <meta charset="UTF-8">
- 
   <title>Flexbox: Sidebar Component</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  
-<style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #9b59b6; /* Color morado */
+      color: white;
+    }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-}
+    .sidebar-wrapper {
+      display: flex;
+      height: 100vh;
+      margin: 20px 0 20px 20px; /*Añadimos el margen para tener el mismo que el de la fotografía del diseño*/
+    }
 
-/* Sidebar Navigation */
-.sidebar__nav {
-  flex-grow: 1;
-}
+    .sidebar {
+      background-color: white;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
 
-</style>
+    .sidebar__logo {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #f4f4f4;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: gray;
+    }
 
+    .sidebar__nav {
+      flex-grow: 1;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar__nav li {
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar__nav li.active,
+    .sidebar__nav li:hover {
+      background-color: #f3e5f5; /* Fondo claro */
+      color: #6a1b9a; /* Color texto morado */
+    }
+
+    .sidebar__profile {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sidebar__profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .sidebar__profile h4 {
+      font-size: 16px;
+      margin: 0;
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
-  <!--Sidebar Component-->
+  <!-- Sidebar Component -->
   <div class="sidebar-wrapper">
     <div class="sidebar">
       <div class="sidebar__logo">
@@ -44,7 +100,6 @@
       </div>
     </div>
   </div>
-
 </body>
+
 </html>
- 
