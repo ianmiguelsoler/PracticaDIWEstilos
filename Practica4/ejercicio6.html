@@ -4,7 +4,107 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ejercicio de selectores</title>
 </head>
- 
+ <style>
+  /* Estilo para el título principal */
+#titulo {
+  color: teal;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Estilo para el subtítulo */
+#subtitulo {
+  color: blue;
+  font-size: 1.5em;
+  line-height: .7em;
+}
+
+/* Estilo para los enlaces */
+a {
+  font-style: italic;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em{
+  color: blue;
+}
+/* Estilo para los textos especiales */
+.especial {
+  color: purple;
+}
+/* Estilo para el primer <strong> */
+  p strong:nth-of-type(1),
+  p a,
+  tbody th,
+  tfoot th {
+    color: red;
+  }
+  
+/* Estilo para el segundo <strong> */
+  tbody strong,
+  tbody th.especial,
+  thead tr th.especial,
+  .destacado,
+  a
+  {
+  color: orange;
+}
+/* Estilo para la tabla */
+table {
+  width: 60%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 20px 0;
+}
+
+table caption {
+  text-align: center;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+table th, table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+thead th {
+  color: white;
+}
+
+td, td em, #adicional p a{
+  color: green;
+}
+
+/* Estilo para los párrafos */
+p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+/* Estilo para los spans dentro de párrafos */
+#especial {
+  color: fuchsia;
+}
+
+span {
+  font-weight: normal;
+}
+
+/* Estilo adicional */
+#adicional {
+  margin-top: 20px;
+  color: olive;
+}
+#adicional p a{
+  font-style: normal;
+}
+
+ </style>
 <body>
 
 <!-- A partir del código HTML proporcionado, añadir las reglas CSS necesarias para que la página resultante tenga el mismo aspecto que el de la imagen. Los nombres de los colores están estandarizados y se corresponden con el nombre en inglés de cada color. Se deben utilizar los colores: teal, red, blue, orange, purple, olive, fuchsia y green. -->
@@ -15,20 +115,20 @@
 ultricies nisl, nonummy tempus neque diam quis felis. <span class="destacado">Etiam sagittis tortor</span> sed arcu sagittis tristique.</p>
  
 <h2 id="subtitulo">Aliquam tincidunt, sem eget volutpat porta</h2>
- 
+
 <p>Vivamus velit dui, placerat vel, feugiat in, ornare et, urna.  <a href="#">Aenean turpis metus, <em>aliquam non</em>, tristique in</a>, pretium varius, sapien. Proin vitae nisi.  Suspendisse <span class="especial">porttitor purus ac elit</span>. Suspendisse eleifend odio at dui. In in elit sed metus pretium elementum.</p>
  
 <table summary="Descripción de la tabla y su contenido">
 <caption>Título de la tabla</caption>
 <thead>
-  <tr>
-    <th scope="col"></th>
+  <tr> 
+    <th scope="col"></th> 
     <th scope="col" class="especial">Título columna 1</th>
     <th scope="col" class="especial">Título columna 2</th>
   </tr>
 </thead>
  
-<tfoot>
+<tfoot> 
   <tr>
     <th scope="col"></th>
     <th scope="col">Título columna 1</th>
@@ -36,7 +136,7 @@ ultricies nisl, nonummy tempus neque diam quis felis. <span class="destacado">Et
   </tr>
 </tfoot>
  
-<tbody>
+<tbody> 
   <tr>
     <th scope="row" class="especial">Título fila 1</th>
     <td>Donec purus ipsum</td>
@@ -60,6 +160,6 @@ posuere id, lorem. Etiam sagittis, tellus in ultrices accumsan, diam nisi feugia
 <p>Vivamus ultrices aliquet augue. <a href="#">Donec arcu pede, pretium vitae</a>, rutrum aliquet, tincidunt blandit, pede. 
 Aliquam in nisi. Suspendisse volutpat. Nulla facilisi. Ut ullamcorper nisi quis mi.</p>
 </div>
- 
+
 </body>
 </html>
