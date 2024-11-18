@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Cambios</title>
+    <style>
+    table {
+            width: 30%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+        }
+        table, th, td {
+            border: 1px solid #333333;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        /* Color amarillo claro alterno en filas */
+        tbody tr:nth-child(even) td {
+            background-color: #FFFFCC;
+        }
+        /* Cabeceras de fila con imágenes de fondo */
+        tbody tr:nth-child(1) td:first-of-type {
+            background-image: url('./euro.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-color: #E6F3FF; /* Azul claro */
+            padding-left: 30px; /* Espaciado para el texto */
+        }
+        tbody tr:nth-child(2) td:first-of-type {
+            background-image: url('./dolar.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-color: #E6F3FF;
+            padding-left: 30px;
+        }
+        tbody tr:nth-child(3) td:first-of-type {
+            background-image: url('./libra.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-color: #E6F3FF;
+            padding-left: 30px;
+        }
+        tbody tr:nth-child(4) td:first-of-type {
+            background-image: url('./yen.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-color: #E6F3FF;
+            padding-left: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tabla de Cambios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cambio</th>
+                <th>Compra</th>
+                <th>Venta</th>
+                <th>Máximo</th>
+                <th>Mínimo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Euro/Dólar</td>
+                <td>1.2524</td>
+                <td>1.2527</td>
+                <td>1.2539</td>
+                <td>1.2488</td>
+            </tr>
+            <tr>
+                <td>Dólar/Yen</td>
+                <td>119.01</td>
+                <td>119.05</td>
+                <td>119.82</td>
+                <td>119.82</td>
+            </tr>
+            <tr>
+                <td>Libra/Dólar</td>
+                <td>1.8606</td>
+                <td>1.8611</td>
+                <td>1.8651</td>
+                <td>1.8522</td>
+            </tr>
+            <tr>
+                <td>Yen/Euro</td>
+                <td>149.09</td>
+                <td>149.13</td>
+                <td>149.79</td>
+                <td>148.96</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
