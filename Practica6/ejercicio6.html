@@ -10,18 +10,51 @@
 
     * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-    .box {
-        color:white;
-        font-size: 100px;
-        text-align: center;
-        text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-        padding:10px;
+    html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Flex para centrar la caja principal */
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgb(255, 174, 0); 
     }
 
-    .box1 { background:#1abc9c;}
-    .box2 { background:#3498db;}
-    .box3 { background:#9b59b6;}
-    .box4 { background:#34495e;}
+    .container {
+        display: flex;
+        align-items: center; /* Alineación en el eje transversal */
+        gap: 0; /* Espaciado entre los elementos */
+    }
+
+    .box {
+        color: white;
+        font-size: 4em;
+        text-align: center;
+        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        flex: 1; /* Proporción uniforme */
+    }
+
+    .box4 {
+        transform: scale(1.2); /* Resalta el número 4 */
+        z-index: 1; /* Eleva el número 4 */
+        background:#34495e;
+    }
+
+
+    .box1 { 
+      background:#1abc9c;
+      transform: scale(0.5);
+    }
+    .box2 {
+      background:#3498db;
+      transform: scale(1.5);
+    }
+    .box3 { 
+      background:#9b59b6;
+      transform: scale(2);
+    }
     .box5 { background:#f1c40f;}
     .box6 { background:#e67e22;}
     .box7 { background:#e74c3c;}
