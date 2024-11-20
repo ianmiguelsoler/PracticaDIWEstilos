@@ -12,27 +12,43 @@ div.grid {
     background:blue;
 }
 
-
-/* Posicionar #moveMe 5px hacia abajo y a la izquierda desde su posición inicial: */
-#moveMe {
+/* El elemento #moveMe se posiciona de manera relativa respecto a su posición inicial.
+   Esto significa que los desplazamientos con las propiedades 'top' y 'left' se aplican 
+   sin alterar la disposición de los demás elementos en el flujo normal de la página. */
+   #moveMe {
     background: blue;
     position: relative;
-    top: 5px; /* Desplaza hacia abajo */
-    left: -5px; /* Desplaza hacia la izquierda */
+    top: 5px; /* Mueve el elemento 5px hacia abajo desde su posición inicial. */
+    left: -5px; /* Mueve el elemento 5px hacia la izquierda desde su posición inicial. */
 }
 
-/* Mover #moveMe 10px hacia abajo y 10px hacia la derecha: */
+/* Modificación para mover el elemento 10px hacia abajo y 10px a la derecha. */
+/* Esto hace que el elemento se separe del borde superior del wrapper y del borde izquierdo, 
+   pero deja un hueco visual en su posición original. */
+
+/* Mueve el elemento 10px hacia abajo respecto a su posición inicial. top: 10px; */
+/* Mueve el elemento 10px hacia la derecha respecto a su posición inicial. left: 10px; */
 /* #moveMe {
     position: relative;
-    top: 10px;
+    top: 10px; 
     left: 10px;
 } */
 
-/* Evitar el hueco moviendo #moveMe hacia arriba en lugar de hacia abajo: */
-/*
-#moveMe {
+
+/* Explicación del hueco: 
+   El hueco ocurre porque al usar 'position: relative', el espacio reservado para #moveMe 
+   en el flujo de la página no cambia. Solo cambia la posición visual del elemento, 
+   pero no su espacio original. Para evitar esto, podemos mover el elemento hacia arriba 
+   en lugar de hacia abajo, eliminando cualquier hueco visible. */
+
+/* Ajuste para mover el elemento 10px hacia arriba y 10px hacia la derecha. */
+/* Esto evita dejar un hueco, ya que el elemento no se desplaza hacia abajo. */
+
+/* Mueve el elemento 10px hacia arriba desde su posición inicial. top: -10px; */
+/* Mueve el elemento 10px hacia la derecha desde su posición inicial. left: 10px;*/
+
+/* #moveMe {
     position: relative;
-    top: -10px;  Se mueve hacia arriba 
-    left: 10px;  Se mueve hacia la derecha 
-}
-*/
+    top: -10px;
+    left: 10px;
+} */
