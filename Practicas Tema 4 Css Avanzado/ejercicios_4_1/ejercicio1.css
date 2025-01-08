@@ -1,0 +1,78 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #222; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor principal */
+#contenedor-principal {
+    width: 90%;
+    max-width: 800px;
+    overflow-x: auto; /* Scroll horizontal */
+    position: relative;
+}
+
+
+/* Controles */
+#controles {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#controles input[type="radio"] {
+    margin-right: 5px;
+}
+
+#controles label {
+    margin-right: 20px;
+}
+
+#rejilla {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Columnas fijas */
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+/* Elementos de la rejilla */
+.elemento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white; /* Color del texto */
+    font-weight: bold;
+}
+
+/* Colores */
+.cian-pastel {
+    background-color: #A8DADC;
+}
+
+.verde-pastel {
+    background-color: #B7E4C7;
+}
+
+.amarillo-pastel {
+    background-color: #F9E79F;
+}
+
+.naranja-pastel {
+    background-color: #F8C291;
+}
+
+.rosa-pastel {
+    background-color: #F8BBD0;
+}

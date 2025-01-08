@@ -1,42 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño de Grid</title>
+  <link rel="stylesheet" href="ejercicio1.css">
 </head>
-
 <body>
+  <div id="contenedor-principal">
+    <div id="controles">
+      <p>
+        <label>separación-filas: <span id="valor-separación-filas">4</span>px</label>
+        <input type="range" id="separación-filas" min="0" max="50" value="4">
+      </p>
+      <p>
+        <label>separación-columnas: <span id="valor-separación-columnas">8</span>px</label>
+        <input type="range" id="separación-columnas" min="0" max="50" value="8">
+      </p>
+      <p>separación: <span id="valor-filas-acortado">4</span>px <span id="valor-columnas-acortado">8</span>px</p>
+      <p>
+        <input type="radio" id="opcion-filas" name="direccion" value="row" checked>
+        <label for="opcion-filas">grid-auto-flow: row;</label>
+      </p>
+      <p>
+        <input type="radio" id="opcion-columnas" name="direccion" value="column">
+        <label for="opcion-columnas">grid-auto-flow: column;</label>
+      </p>
+    </div>
+    <div id="rejilla">
+      <div class="elemento cian-pastel">1</div>
+      <div class="elemento naranja-pastel">4</div>
+      <div class="elemento verde-pastel">7</div>
+      <div class="elemento rosa-pastel">10</div>
+      <div class="elemento amarillo-pastel">13</div>
+      <div class="elemento verde-pastel">2</div>
+      <div class="elemento rosa-pastel">5</div>
+      <div class="elemento amarillo-pastel">8</div>
+      <div class="elemento cian-pastel">11</div>
+      <div class="elemento naranja-pastel">14</div>
+      <div class="elemento amarillo-pastel">3</div>
+      <div class="elemento cian-pastel">6</div>
+      <div class="elemento naranja-pastel">9</div>
+      <div class="elemento verde-pastel">12</div>
+      <div class="elemento rosa-pastel">15</div>
+    </div>    
+  </div>
+  <script>
+    const entradaSeparaciónFilas = document.getElementById("separación-filas");
+    const entradaSeparaciónColumnas = document.getElementById("separación-columnas");
+    const valorSeparaciónFilas = document.getElementById("valor-separación-filas");
+    const valorSeparaciónColumnas = document.getElementById("valor-separación-columnas");
+    const valorFilasAcortado = document.getElementById("valor-filas-acortado");
+    const valorColumnasAcortado = document.getElementById("valor-columnas-acortado");
+    const rejilla = document.getElementById("rejilla");
 
-<div id="wrapper">
-<div id="gridGaps" class="range">
-  <p>
-  <label>grid-rows-gap: <span>1</span>px;</label>
-  <input type="range" name="gridRowGap" min="0" max="20" value="1"> 
-  <p>
-  <p>
-  <label>grid-column-gap: <span>1</span>px;</label>
-  <input type="range" name="gridColumnGap" min="0" max="20" value="1"> 
-  <p>
-  <p style="display:inline; white-space: nowrap;">grid-gap: <span id="spangridRowGap">1</span>px <span id="spangridColumnGap">1</span>px;</p>
-</div>
+    const actualizarSeparaciónRejilla = () => {
+      const separaciónFilas = entradaSeparaciónFilas.value;
+      const separaciónColumnas = entradaSeparaciónColumnas.value;
 
-<div id="cuadricula">
-<div class="item" style="--color:#3E989B;"><p>1</p></div>   
-<div class="item" style="--color:#6DB465;"><p>2</p></div>
-<div class="item" style="--color:#F2C14E;"><p>3</p></div>
-<div class="item" style="--color:#F78154;"><p>4</p></div>
-<div class="item" style="--color:#C87694;"><p>5</p></div>
-<div class="item" style="--color:#3E989B;"><p>6</p></div>   
-<div class="item" style="--color:#6DB465;"><p>7</p></div>
-<div class="item" style="--color:#F2C14E;"><p>8</p></div>
-<div class="item" style="--color:#F78154;"><p>9</p></div>
-<div class="item" style="--color:#C87694;"><p>10</p></div>
-<div class="item" style="--color:#3E989B;"><p>11</p></div>   
-<div class="item" style="--color:#6DB465;"><p>12</p></div>
-<div class="item" style="--color:#F2C14E;"><p>13</p></div>
-<div class="item" style="--color:#F78154;"><p>14</p></div>
-<div class="item" style="--color:#C87694;"><p>15</p></div>  
-</div>
-</div>
+      rejilla.style.rowGap = `${separaciónFilas}px`;
+      rejilla.style.columnGap = `${separaciónColumnas}px`;
 
+      valorSeparaciónFilas.textContent = separaciónFilas;
+      valorSeparaciónColumnas.textContent = separaciónColumnas;
+      valorFilasAcortado.textContent = separaciónFilas;
+      valorColumnasAcortado.textContent = separaciónColumnas;
+    };
+
+    entradaSeparaciónFilas.addEventListener("input", actualizarSeparaciónRejilla);
+    entradaSeparaciónColumnas.addEventListener("input", actualizarSeparaciónRejilla);
+
+    // Inicializar con valores predeterminados
+    actualizarSeparaciónRejilla();
+
+    //Ejercicio 2
+    const botonesRadio = document.getElementsByName("direccion");
+
+    botonesRadio.forEach(boton => {
+      boton.addEventListener("change", (event) => {
+        rejilla.style.gridAutoFlow = event.target.value;
+      });
+    });
+  </script>
 </body>
 </html>

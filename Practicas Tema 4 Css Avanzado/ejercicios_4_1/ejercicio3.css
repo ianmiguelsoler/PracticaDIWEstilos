@@ -1,0 +1,29 @@
+#cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    width: 320px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: #f9f9f9;
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #777;
+    background-color: #e3e3e3;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .controls {
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  label {
+    margin: 0 10px;
+  }
