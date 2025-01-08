@@ -2,35 +2,144 @@
 <html>
 <head>
 <meta charset="utf-8">
-
 <title>Responsive Design</title>
+<style>
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-<!-- mediaqueries para IE8 o anterior -->
-<!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
+    #wrapper {
+        width: 900px;
+        margin: 0 auto;
+		border: 2px solid black;
+    }
+	#wrapper > div{
+		border: 1px solid black;
+		margin: 5px;
 
+	}
+
+    #header {
+        height: 180px;
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #header h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+
+    #content {
+        float: left;
+        width: 600px;
+		height: 450px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #sidebar {
+        float: right;
+        width: 250px;
+        background-color: #ddd;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #footer {
+        clear: both;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Media Queries */
+
+    /* For screens 980px or less */
+    @media (max-width: 980px) {
+        #wrapper {
+            width: 94%;
+        }
+
+        #content {
+            float: none;
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        #sidebar {
+            float: none;
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
+
+    /* For screens 700px or less */
+    @media (max-width: 700px) {
+        #content, #sidebar {
+            float: none;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    /* For screens 480px or less */
+    @media (max-width: 480px) {
+        #header {
+            height: auto;
+            padding: 10px;
+        }
+
+        #header h1 {
+            font-size: 24px;
+        }
+
+        #sidebar {
+            display: none;
+        }
+    }
+
+    /* Additional Media Query (Example) */
+    @media (orientation: landscape) {
+        #header {
+            background-color: #555;
+        }
+
+        #footer {
+            background-color: #222;
+        }
+    }
+</style>
 </head>
-
 <body>
 
 <div id="wrapper">
 
-	<div id="header">
-		<h1>Cabecera</h1>
-	</div>
+    <div id="header">
+        <h1>Cabecera</h1>
+    </div>
 
-	<div id="content">
-		<h2>Contenido</h2>
-	</div>
+    <div id="content">
+        <h2>Contenido</h2>
+        <p>Este es el contenido principal de la página.</p>
+    </div>
 
-	<div id="sidebar">
-		<h3>Barra lateral</h3>
-	</div>
-	
-	<div id="footer">
-		<h4>Pie</h4>
-	</div>
+    <div id="sidebar">
+        <h3>Barra lateral</h3>
+        <p>Este es el contenido de la barra lateral.</p>
+    </div>
+
+    <div id="footer">
+        <h4>Pie</h4>
+        <p>Este es el pie de la página.</p>
+    </div>
 
 </div>
 
