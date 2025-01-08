@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<title>Mapa de imagen</title>
-	<style>
-body { font-family: Verdana; font-size: 10px; }
-div.mapa_imagen {
-  position: relative
-}
-ul.notas li {
-  list-style: none;
-  display: none;
-  position: absolute;
-  border: medium solid white;
-}
-div.mapa_imagen:hover ul.notas li {
-  display: block;
-}
-ul.notas li p {
-  margin: 10px 0 0 0;
-  padding: .3em;
-  display: none;
-  background: #FFF;
-  opacity: 0.65;
-  position: absolute;
-  top: 100%;
-}
-ul.notas li:hover p {
-  display: block;
-}
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Mapas de Imagen</title>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 12px;
+        }
 
-ul.notas li#nota1 {
-  width: 140px; height: 110px; top: 130px; left: 345px;
-}
-ul.notas li#nota2 {
-  width: 30px; height: 200px; top: 10px; left: 10px;
-}
-ul.notas li#nota3 {
-  width: 60px; height: 60px; top: 200px; left: 150px;
-}
+        /* Estilo del primer mapa de imagen */
+        div.mapa_imagen {
+            position: relative;
+        }
 
-</style>
+        ul.notas li {
+            list-style: none;
+            display: none;
+            position: absolute;
+            border: medium solid white;
+        }
+
+        div.mapa_imagen:hover ul.notas li {
+            display: block;
+        }
+
+        ul.notas li p {
+            margin: 10px 0 0 0;
+            padding: .3em;
+            display: none;
+            background: #FFF;
+            opacity: 0.75;
+            position: absolute;
+            top: 100%;
+        }
+
+        ul.notas li:hover p {
+            display: block;
+        }
+
+        ul.notas li#nota1 {
+            width: 120px; height: 130px; top: 50px; left: 240px;
+        }
+
+        ul.notas li#nota2 {
+            width: 350px; height: 150px; top: 190px; left: 180px;
+        }
+
+        ul.notas li#nota3 {
+            width: 100px; height: 60px; top: 350px; left: 400px;
+        }
+
+        /* Estilo general del segundo mapa de imagen */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #auroraB {
+            width: 100%; /* Ajusta la imagen para que ocupe el contenedor */
+            max-width: 1200px; /* Asegura que la imagen no exceda sus dimensiones originales */
+        }
+    </style>
 </head>
 <body>
- 
-<div class="mapa_imagen">
-  <img src="mar.jpg" />
+    <h1>Primer Mapa de Imagen (CSS)</h1>
+    <div class="mapa_imagen">
+        <img src="cuyos.jpg" alt="Paisaje" />
+        <ul class="notas">
+            <li id="nota1"><p>Esto es una cobaya bebe</p></li>
+            <li id="nota2"><p>Es una hermosa cobaya posando en la cámara</p></li>
+            <li id="nota3"><p>Esto es hierba que se comerá la cobaya más tarde</p></li>
+        </ul>
+    </div>
 
-  <ul class="notas">
-    <li id="nota1"><p>Todo el mar es suyo :)</p></li>
-    <li id="nota2"><p>Me encanta este color azul</p></li>
-    <li id="nota3"><p>Dan ganas de tirarse...</p></li>
-  </ul>
-</div>
-
+    <h1>Segundo Mapa de Imagen (HTML)</h1>
+    <img id="auroraB" src="Aurora-boreal.jpg" alt="Aurora Boreal" usemap="#auroraBoreal" />
+    <map name="auroraBoreal">
+        <!-- Ajuste de áreas activas para la resolución de 1200x800 -->
+        <area shape="rect" coords="100,100,400,300" href="#" alt="Zona 1" title="Zona de Bosque"/>
+        <area shape="circle" coords="600,400,100" href="#" alt="Zona 2" title="Centro de la Aurora" />
+        <area shape="poly" coords="800,600,900,700,700,750,650,650" href="#" alt="Zona 3" title="Parte Inferior" />
+    </map>
 </body>
 </html>
