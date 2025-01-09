@@ -6,6 +6,7 @@ body {
     margin: 0; /* Elimina márgenes predeterminados */
     height: 100vh; /* Hace que el body tenga el 100% del alto de la ventana */
     width: 100%; /* Asegura que el body ocupe todo el ancho de la ventana */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #site-logo > a{
@@ -43,9 +44,38 @@ nav {
     padding-left: 20px;
 }
 
-#main-nav li {
+li{
     list-style: none;
 }
+.widget ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+.widget h4{
+    border-bottom: 1px solid #eeeeee; 
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.widget ul li {
+    border-bottom: 1px solid #eeeeee; /* Línea separadora azul claro */
+    padding: 10px 0; /* Espaciado vertical entre los elementos */
+}
+
+.widget ul li:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+}
+
+.widget ul li a {
+    color: #3366cc; /* Cambia el color del enlace a azul claro */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.widget ul li a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+
 
 #main-nav a, #site-logo > a {
     text-decoration: none;
@@ -82,8 +112,15 @@ nav {
     margin-left: 10%;
     float: left;
 }
+img{
+    width: 100%;
+    border-radius: 20px;
+}
 header h1 a{
     color: black;
+    text-decoration: none;
+}
+a{
     text-decoration: none;
 }
 /* Article */
@@ -97,8 +134,8 @@ article {
 /* Sidebar */
 #sidebar {
     width: 250px;
-    margin-left: 5%;
-    float: left;
+    margin-right:  17%;
+    float: right;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -107,14 +144,12 @@ article {
 }
 
 #footer {
-    position: fixed; /* Fija el footer en una posición específica */
-    bottom: 0; /* Posiciónalo en la parte inferior */
-    left: 10%; /* Alinéalo hacia la izquierda del contenedor principal */
-    background: transparent; /* Fondo transparente para que combine con la página */
-    padding: 10px; /* Agrega un poco de espacio interior */
-    font-size: 14px; /* Tamaño de fuente más pequeño */
-    color: white; /* Texto en blanco para que destaque */
-    z-index: 1000; /* Asegúrate de que se muestre sobre otros elementos */
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    clear: none;
 }
 
 
@@ -133,3 +168,34 @@ article {
     }
 }
 
+@media (max-width: 1550px) {
+  
+    #sidebar {
+        width: 70%;
+        margin-left: 16%;
+        float: right;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    #content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 73%;
+        margin-left: 10%;
+        float: left;
+    }
+
+    #footer {
+        position: fixed; /* Fija el footer en una posición específica */
+        background: transparent; /* Fondo transparente para que combine con la página */
+        padding: 10px; /* Agrega un poco de espacio interior */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        color: white; /* Texto en blanco para que destaque */
+    }
+   
+}
