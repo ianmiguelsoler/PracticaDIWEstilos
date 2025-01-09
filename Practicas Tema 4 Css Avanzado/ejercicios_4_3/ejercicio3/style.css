@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     background-image: url(images/body-bg.jpg);
     background-size: cover; /* Hace que la imagen cubra todo el fondo */
@@ -9,23 +10,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#site-logo > a{
+/* Header Section */
+#header {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+#site-logo > a {
     color: white;
     margin-bottom: 5px; /* Reduce el margen inferior */
 }
-#site-description{
+
+#site-description {
     color: white;
     font-size: 15px;
     font-style: italic;
     margin-top: -10px; /* Elimina el margen superior */
     margin-bottom: 30px;
 }
-#header{
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-}
-/* General styles for the navigation bar */
+
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: flex-start; /* Alinea los enlaces al principio */
@@ -44,22 +49,92 @@ nav {
     padding-left: 20px;
 }
 
-li{
-    list-style: none;
+#main-nav a, #site-logo > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
+#main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Search Form */
+#searchform {
+    position: absolute; /* Posición absoluta dentro del contenedor nav */
+    right: 20px; /* Ajusta la distancia al borde derecho */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste adicional para centrar */
+}
+
+#searchform input[type="search"] {
+    padding: 5px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* Main Content */
+#content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 800px;
+    margin-left: 10%;
+    float: left;
+}
+
+article {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+article > :not(figure) {
+    padding-left: 4%;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    margin-right: 17%;
+    float: right;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Footer */
+#footer {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    clear: both;
+    width: 10%;
+    margin-left: 6%;
+}
+
+/* Widget Styles */
 .widget ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     padding: 0; /* Elimina el padding predeterminado */
     margin: 0; /* Elimina el margen predeterminado */
 }
-.widget h4{
-    border-bottom: 1px solid #eeeeee; 
+
+.widget h4 {
+    border-bottom: 1px solid #eeeeee;
     padding-bottom: 10px;
     margin-bottom: 2px;
     margin-top: 2px;
 }
+
 .widget ul li {
-    border-bottom: 1px solid #eeeeee; /* Línea separadora azul claro */
+    border-bottom: 1px solid #eeeeee; /* Línea separadora */
     padding: 10px 0; /* Espaciado vertical entre los elementos */
 }
 
@@ -76,134 +151,75 @@ li{
     text-decoration: underline; /* Añade subrayado al pasar el ratón */
 }
 
-
-#main-nav a, #site-logo > a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* General Element Styles */
+li {
+    list-style: none;
 }
 
-#main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Styles for the search form */
-#searchform {
-    position: absolute; /* Posición absoluta dentro del contenedor nav */
-    right: 20px; /* Ajusta la distancia al borde derecho */
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajuste adicional para centrar */
-}
-
-#searchform input[type="search"] {
-    padding: 5px 10px;
-    border: 1px solid grey;
-    border-radius: 5px;
-}
-
-/* Contenedor principal */
-#content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 800px;
-    margin-left: 10%;
-    float: left;
-}
-img{
+img {
     width: 100%;
     border-radius: 20px;
 }
-header h1 a{
+
+a {
+    text-decoration: none;
+}
+
+header h1 a {
     color: black;
     text-decoration: none;
 }
-a{
-    text-decoration: none;
-}
-/* Article */
-article {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-article > :not(figure){
-    padding-left: 4%;
-}
-/* Sidebar */
-#sidebar {
-    width: 250px;
-    margin-right:  17%;
-    float: right;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
 
-#footer {
-    padding: 10px;
+.post-date {
     font-size: 14px;
-    color: white;
-    text-align: center;
-    clear: both;
-    width: 10%;
-    margin-left: 6%;
+    color: #555;
 }
 
-
-/* Media query for small screens */
+/* Media Queries */
 @media (max-width: 768px) {
     #searchform {
-        position: absolute; /* Mantén posición absoluta */
-        top: -80px; /* Ajusta a la esquina superior derecha */
-        right: -95px; /* Pegado al borde derecho */
-        transform: none; /* Elimina el ajuste de centrado */
+        position: absolute;
+        top: -80px;
+        right: -95px;
+        transform: none;
     }
-    #s{
+
+    #s {
         width: 50%;
     }
 
     nav {
-        flex-wrap: wrap; /* Permite que los enlaces se ajusten si es necesario */
-        padding-top: 40px; /* Da espacio para el campo de búsqueda arriba */
+        flex-wrap: wrap;
+        padding-top: 40px;
     }
 }
 
 @media (max-width: 1550px) {
-  
     #sidebar {
         width: 70%;
-        margin-left: 16%;
-        float: right;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
+        margin-left: 10%;
+        float: left;
+        margin-right: 0;
     }
 
     #content {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
         width: 73%;
+        margin-left: 10%;
+    }
+
+    #footer {
+        width: 10%;
+        margin-left: 6%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #sidebar {
+        width: 70%;
+        margin-right: 0;
         margin-left: 10%;
         float: left;
     }
 
-    #footer {
-        padding: 10px;
-        font-size: 14px;
-        color: white;
-        text-align: center;
-        clear: both;
-        width: 10%;
-        margin-left: 6%;
-    }
-   
 }
