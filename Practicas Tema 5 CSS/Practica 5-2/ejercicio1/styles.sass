@@ -1,0 +1,29 @@
+// Variables de colores
+$color-naranja: #FF8000
+$color-verdoso: #2E5F64
+
+// Estilo general para los elementos <div>
+div
+  padding: 20px
+
+  // Estilo para el <div> con id="primero"
+  &#primero
+    .destacado
+      color: $color-naranja
+      font-size: 1.6rem
+      text-align: center
+      padding: 6px
+
+  // Estilo para el <div> con id="segundo"
+  &#segundo
+    .destacado
+      color: $color-verdoso
+      font-size: 1.4rem
+      text-decoration: underline
+      padding: 5px
+
+    #parrafos
+      text-align: right
+
+      p:first-of-type
+        font-style: italic
