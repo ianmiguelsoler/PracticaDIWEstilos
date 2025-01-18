@@ -1,0 +1,55 @@
+// Menú
+nav {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      &.submenu {
+        @include transition(height, 0.5s);
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  
+    > ul {
+      width: 100%;
+      height: 32px;
+      @include text-and-bg-color($color-text, $color-bg);
+    }
+  
+    a {
+      @include text-and-bg-color($color-text, $color-bg);
+      text-decoration: none;
+      width: 160px;
+      padding: 7px 20px;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+  
+      @include hover-text-and-bg-color($color-text-hover, $color-bg-hover);
+      @include animation(iluminar, 0.4s);
+    }
+  }
+  
+  li.categoria {
+    float: left;
+  
+    > a {
+      @include transition(padding, 0.4s);
+  
+      &:hover {
+        padding: 10px 20px;
+      }
+    }
+  
+    &:hover ul.submenu {
+      height: 100px;
+    }
+  }
+  
