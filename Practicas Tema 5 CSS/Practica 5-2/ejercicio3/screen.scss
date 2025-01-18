@@ -1,0 +1,207 @@
+// Variables
+$colorText: #eee; // Color del texto
+$colorBack: #15a; // Color de fondo
+
+// Colores generados con funciones
+$colorTextHover: lighten($colorText, 10%); // Aclaramos el texto un 10%
+$colorBackHover: lighten($colorBack, 10%); // Aclaramos el fondo un 10%
+$colorTitulo: darken($colorBack, 10%); // Oscurecemos el fondo un 10%
+
+// Mixins
+@mixin text-and-bg-color($text-color, $bg-color) {
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+@mixin hover-text-and-bg-color($text-color, $bg-color) {
+  &:hover {
+    color: $text-color;
+    background-color: $bg-color;
+  }
+}
+
+@mixin box-sizing($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin transition($property, $duration, $timing: ease-out) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+@mixin animation($name, $duration, $timing: linear) {
+  -webkit-animation: $name $duration $timing;
+  -moz-animation: $name $duration $timing;
+  animation: $name $duration $timing;
+}
+
+// Keyframes
+@keyframes iluminar {
+  from {
+    background-color: $colorBack;
+    color: $colorText;
+  }
+  to {
+    background-color: $colorBackHover;
+    color: $colorTextHover;
+  }
+}
+
+// Estilos generales
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: $colorText;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+footer {
+  @include text-and-bg-color($colorText, $colorBack);
+  @include box-sizing(border-box);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}
+
+// Menú
+nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &.submenu {
+      @include transition(height, 0.5s);
+      position: absolute;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  > ul {
+    width: 100%;
+    height: 32px;
+    @include text-and-bg-color($colorText, $colorBack);
+  }
+
+  li.categoria {
+    float: left;
+
+    > a {
+      @include transition(padding, 0.4s);
+
+      &:hover {
+        padding: 10px 20px;
+      }
+    }
+
+    &:hover ul.submenu {
+      height: 100px;
+    }
+  }
+
+  a {
+    @include text-and-bg-color($colorText, $colorBack);
+    text-decoration: none;
+    width: 160px;
+    padding: 7px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+
+    @include hover-text-and-bg-color($colorTextHover, $colorBackHover);
+    @include animation(iluminar, 0.4s);
+  }
+}
+
+// Contenido
+#contenido {
+  padding: 30px 20px;
+
+  .col-left {
+    @include box-sizing(border-box);
+    width: 30%;
+    float: left;
+    padding: 10px;
+
+    .login {
+      input {
+        @include box-sizing(border-box);
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: 1px solid #bbb;
+      }
+
+      button {
+        @include box-sizing(border-box);
+        background-color: $colorBack;
+        color: $colorText;
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .col-right {
+    @include box-sizing(border-box);
+    margin-left: 30%;
+    width: 70%;
+    padding: 10px;
+
+    h1 {
+      color: $colorTitulo;
+      font-size: 1.6em;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+
+  #contenido {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #contenido .col-left {
+    float: none;
+    width: 100%;
+  }
+
+  #contenido .col-right {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+#contenido .button-action {
+  @include text-and-bg-color($colorBack, $colorTextHover);
+
+  &:hover {
+    background-color: lighten($colorBack, 20%);
+  }
+}
