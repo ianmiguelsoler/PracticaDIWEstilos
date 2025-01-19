@@ -1,92 +1,123 @@
-// Variables de colores
-@primary-color: #3498db;
-@secondary-color: lighten(@primary-color, 20%);
-@background-color: darken(@primary-color, 10%);
+// **Definición de variables**: se utilizan para colores, tipografías, rutas de imágenes y otros valores reutilizables.
+@primary-color: #3498db; // Color principal utilizado en todo el proyecto.
+@secondary-color: lighten(@primary-color, 20%); // Color secundario, calculado aclarando el color principal en un 20%.
+@background-color: darken(@primary-color, 10%); // Color de fondo, calculado oscureciendo el color principal en un 10%.
+@color-text: #fff; // Color blanco para textos.
 
-// Variables de referencia
-@font-base: 'Verdana, Arial, sans-serif';
-@image-path: './images'; // Carpeta donde estará el archivo sprite.png
-@max-width: 1200px;
+@font-base: 'Verdana, Arial, sans-serif'; // Fuente base utilizada en los textos.
+@image-path: './images'; // Ruta base donde se almacenan las imágenes.
+@max-width: 1200px; // Máximo ancho utilizado para elementos como imágenes.
 
-// Mixin para texto básico
+@dark-gradient-1: #0f2027; // Primer color para el gradiente de fondo.
+@dark-gradient-2: #203a43; // Segundo color del gradiente.
+@dark-gradient-3: #2c5364; // Tercer color del gradiente.
+
+// **Keyframes para animaciones**: define una animación de gradiente en el fondo.
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// **Mixin para texto básico**: simplifica el estilo base del texto.
 .text-basic {
-  font-family: @font-base;
-  font-size: 12px;
-  color: @primary-color;
+  font-family: @font-base; // Fuente de texto base.
+  font-size: 12px; // Tamaño de fuente predeterminado.
+  color: @primary-color; // Utiliza el color principal para el texto.
 }
 
-// Mixin para bordes redondeados
+// **Mixin para bordes redondeados**: permite personalizar el radio del borde.
 .rounded(@radius: 5px) {
-  border-radius: @radius;
+  border-radius: @radius; // Aplica un radio redondeado con un valor predeterminado de 5px.
 }
 
-// Estilo del cuerpo
+// **Estilo del cuerpo**: aplica un fondo animado y configura el diseño base de la página.
 body {
-  .text-basic();
-  background-color: @background-color;
+  background: linear-gradient(45deg, @dark-gradient-1, @dark-gradient-2, @dark-gradient-3); // Gradiente con tres colores oscuros.
+  background-size: 200% 200%; // Configuración para animar el gradiente.
+  animation: gradientAnimation 10s ease infinite; // Aplica la animación definida en los keyframes.
+  margin: auto 20%; // Centra el contenido horizontalmente con márgenes laterales.
+  color: white; // Color de texto para garantizar la legibilidad.
+  font-family: @font-base; // Aplica la fuente base.
+  height: 100vh; // Asegura que el cuerpo ocupe toda la altura de la ventana.
 }
 
-// Estilo del primer mapa de imagen
+// **Mapa de imagen con anotaciones**: organiza elementos posicionados sobre una imagen.
 .mapa_imagen {
-  position: relative;
+  position: relative; // Necesario para posicionar elementos hijos absolutamente.
   img {
-    max-width: 100%;
-    .rounded(10px);
+    max-width: 100%; // La imagen se ajusta al ancho del contenedor.
+    .rounded(10px); // Aplica bordes redondeados usando el mixin.
   }
 
   ul.notas {
     li {
-      list-style: none;
-      display: none;
-      position: absolute;
-      border: medium solid white;
+      list-style: none; // Elimina los estilos de lista.
+      position: absolute; // Posiciona las notas sobre la imagen.
 
       &:hover p {
-        display: block;
+        display: block; // Muestra el texto de la nota al pasar el mouse.
       }
 
       p {
-        margin: 10px 0 0 0;
-        padding: 0.3em;
-        display: none;
-        background: @secondary-color;
-        opacity: 0.75;
-        position: absolute;
-        top: 100%;
+        margin: 10px 0 0 0; // Margen superior para separar el texto.
+        padding: 0.3em; // Espaciado interno para el texto.
+        background: @secondary-color; // Fondo de las notas con el color secundario.
+        opacity: 0.75; // Hace el fondo ligeramente transparente.
+        position: absolute; // Permite posicionar el texto respecto al contenedor.
+        top: 100%; // Coloca el texto debajo de su elemento padre.
       }
     }
   }
 }
 
-// Uso de sprites
+// **Uso de sprites**: permite usar múltiples imágenes desde un archivo sprite.
 .sprite {
-  background: url('@{image-path}/spritesheet.png') no-repeat;
+  background: url('@{image-path}/spritesheet.png') no-repeat; // Ruta del archivo sprite.
+  position: absolute; // Posiciona los elementos sprite.
+  z-index: 10; // Asegura que esté por encima de otros elementos.
 
   &.hover1 {
-    background-position: 0 0; // Primera imagen en el sprite
-    width: 120px; height: 130px; top: 50px; left: 240px;
+    background-position: 10px 10px; // Selecciona la primera imagen del sprite.
+    width: 100px; height: 100px; // Tamaño del sprite.
+    top: 50px; left: 240px; // Posiciona el sprite en la página.
   }
 
   &.hover2 {
-    background-position: -120px 0; // Segunda imagen en el sprite
-    width: 350px; height: 150px; top: 190px; left: 180px;
-  }
-
-  &.hover3 {
-    background-position: -470px 0; // Tercera imagen en el sprite
-    width: 100px; height: 60px; top: 350px; left: 400px;
+    background-position: 60px 30px; // Selecciona la segunda imagen del sprite.
+    width: 150px; height: 130px; // Tamaño del sprite.
+    top: 190px; left: 180px; // Posiciona el sprite en la página.
   }
 }
 
-// Estilo del segundo mapa de imagen
+// **Estilo del segundo mapa de imagen**: configura el contenedor para ajustarse a un máximo definido.
 #auroraB {
-  width: 100%;
-  max-width: @max-width;
+  width: 100%; // Ajusta al 100% del ancho disponible.
+  max-width: @max-width; // Restringe el ancho máximo a 1200px.
 }
 
-// Optimización con Base64
+// **Optimización de imágenes Base64**: aplica efectos a imágenes optimizadas.
 .base64-img {
-  background: url('data:image/png;base64,[TU_CODIGO_BASE64]') no-repeat;
-  width: 100px;
-  height: 100px;
+  width: 100px; // Tamaño del contenedor de imágenes.
+  display: flex; // Usa un diseño de flexbox para alinear imágenes.
+  gap: 10px; // Espaciado entre las imágenes.
+  height: 100px; // Altura del contenedor.
+
+  > img {
+    width: 400px; // Ancho de cada imagen.
+    height: 300px; // Altura de cada imagen.
+    border: 2px solid white; // Borde blanco alrededor de las imágenes.
+    border-radius: 20px; // Bordes redondeados.
+    transition: transform 0.3s ease-in-out; // Animación de escalado suave.
+
+    &:hover {
+      transform: scale(1.1); // Aumenta el tamaño al pasar el mouse.
+    }
+  }
 }

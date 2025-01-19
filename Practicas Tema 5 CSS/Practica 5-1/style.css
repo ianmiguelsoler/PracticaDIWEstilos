@@ -1,13 +1,27 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .text-basic {
   font-family: 'Verdana, Arial, sans-serif';
   font-size: 12px;
   color: #3498db;
 }
 body {
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  margin: auto 20%;
+  color: white;
   font-family: 'Verdana, Arial, sans-serif';
-  font-size: 12px;
-  color: #3498db;
-  background-color: #217dbb;
+  height: 100vh;
 }
 .mapa_imagen {
   position: relative;
@@ -18,9 +32,7 @@ body {
 }
 .mapa_imagen ul.notas li {
   list-style: none;
-  display: none;
   position: absolute;
-  border: medium solid white;
 }
 .mapa_imagen ul.notas li:hover p {
   display: block;
@@ -28,7 +40,6 @@ body {
 .mapa_imagen ul.notas li p {
   margin: 10px 0 0 0;
   padding: 0.3em;
-  display: none;
   background: #8bc4ea;
   opacity: 0.75;
   position: absolute;
@@ -36,34 +47,40 @@ body {
 }
 .sprite {
   background: url('./images/spritesheet.png') no-repeat;
+  position: absolute;
+  z-index: 10;
 }
 .sprite.hover1 {
-  background-position: 0 0;
-  width: 120px;
-  height: 130px;
+  background-position: 10px 10px;
+  width: 100px;
+  height: 100px;
   top: 50px;
   left: 240px;
 }
 .sprite.hover2 {
-  background-position: -120px 0;
-  width: 350px;
-  height: 150px;
+  background-position: 60px 30px;
+  width: 150px;
+  height: 130px;
   top: 190px;
   left: 180px;
-}
-.sprite.hover3 {
-  background-position: -470px 0;
-  width: 100px;
-  height: 60px;
-  top: 350px;
-  left: 400px;
 }
 #auroraB {
   width: 100%;
   max-width: 1200px;
 }
 .base64-img {
-  background: url('data:image/png;base64,[TU_CODIGO_BASE64]') no-repeat;
   width: 100px;
+  display: flex;
+  gap: 10px;
   height: 100px;
+}
+.base64-img > img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.base64-img > img:hover {
+  transform: scale(1.1);
 }
