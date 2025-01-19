@@ -1,0 +1,11 @@
+// Variables
+$colorText: #eee;
+$colorBack: #15a;
+$colorTitulo: darken($colorBack, 10%);
+
+// Importa los mixins y los estilos modulares
+@import 'mixin';
+@import 'menu';
+@import 'contenido';
+
+

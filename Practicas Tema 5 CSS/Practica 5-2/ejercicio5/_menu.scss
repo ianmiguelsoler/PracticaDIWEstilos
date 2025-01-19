@@ -1,0 +1,5 @@
+nav {
+    @include responsive(medium) {
+      display: none;
+    }
+  }
